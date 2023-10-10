@@ -52,23 +52,13 @@ p{
 
     border-radius: 10px;
     justify-self: end;
+}
 .imgtop{
     position: relative;
     height: 20px;
     width: 20px;
     top: 15px;
     right: -500px;
-}
-
-.imgtop img{
-    float: right;
-    height : 20px;
-    width: 20px;
-
-    border-radius: 10px;
-    justify-self: end;
-    filter: grayscale(100%);
-}
 }
 
 .Navigation li{
