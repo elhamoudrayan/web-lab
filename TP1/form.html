@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+</head>
+<body>
+    <section>
+        <form action="" method="get">
+            <H1>Register to our online service</H1>
+            <fieldset>
+                <legend>Personal details</legend>
+                <label for="firstname">First Name</label>
+                <br>
+                <input type="text" id="firstname" name="first" placeholder="First name only">
+
+                <br><br>
+
+                <label for="lastname">Last Name</label>
+                <br>
+                <input type="text" id="lastname" name="last" placeholder="Last name only">
+
+                <br><br>
+
+                <label for="birth">Date of birth</label>
+                <br>
+                <input type="date" id="birth" name="birthdate" placeholder="mm / dd / yyyy">
+
+                <br><br>
+
+                <label for="email">Email</label>
+                <br>
+                <input type="email" id="email" name="email" placeholder="example@domain.com">
+
+                <br><br>
+
+                <label for="url">URL</label>
+                <br>
+                <input type="url" id="url" name="url" placeholder="http://mywebsite.com">
+
+                <br><br>
+
+                <label for="phone">Telephone</label>
+                <br>
+                <input type="text" id="phone" name="telephone" placeholder="Eg. +447000 000000">
+
+                <br><br>
+
+                <label for="shoesize">shoesize</label>
+                <br>
+                <input type="number" id="shoesize" name="ssize" value="9" min="1" max="18">
+
+                <br><br>
+
+                <label for="slider">Flying skill level (1 low - 100 high)</label>
+                <br>
+                <input type="range" id="slider" name="slider" min="1" max="100" step="1" value="1">
+            </fieldset>
+
+            <br><br>
+
+            <fieldset>
+                <legend>Personal Billing address</legend>
+
+                <label for="adrress">Address</label>
+                <textarea id="address" name="address" rows="10" cols="40"></textarea>
+
+                <br><br>
+
+                <label for="Pc">Post code</label>
+                <br>
+                <input type="text" id="Pc" name="PostCode">
+
+                <br><br>
+
+                <label for="cntry">Country</label>
+                <br>
+                <input type="text" id="" name="cntrycountry" >
+
+            </fieldset>
+
+             <br><br>
+
+            <fieldset>
+                <legend>Card details</legend>
+                 <br><br>
+                <fieldset>
+                    <Legend>Card type</Legend>
+                    
+                    <label for="card" ><input type="radio" id="card" name="choice" value="VISA">VISA</label>
+                    <label for="card"> <input type="radio" id="card" name="choice" value="Mastercard">Mastercard</label>
+                    <label for="card" ><input type="radio" id="card" name="choice" value="AMEX">AMEX</label>
+                </fieldset>
+                 <br><br>
+                <label for="namec">Name</label>
+                <br>
+                <input type="text" id="namec" name="name" placeholder="Name as it appears on your card">
+
+                <br><br>
+
+                <label for="cardnum">Card number</label>
+                <br>
+                <input type="number" id="cardnum" name="cardnumber" min="10000000" max="99999999">
+
+                <br><br>
+
+                <label for="seccode">Security code</label>
+                <br>
+                <input type="number" id="seccode" name="security" min="10000000" max="99999999">
+
+                <br><br>
+
+                <label for="namec">Expiry Date</label>
+                <br>
+                <input type="text" id="exdt" name="expiry">
+
+                
+
+            </fieldset>
+             <br><br>
+            <fieldset>
+                <br>
+                <button>Register Now</button>
+                <br><br>
+            </fieldset>
+            
+        </form>
+    </section>
+</body>
+</html>

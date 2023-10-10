@@ -1,0 +1,220 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: rgb(50, 255, 224);
+    margin-bottom: 30px;
+}
+
+p{
+    font-size: 40px;
+}
+
+
+.Logo {
+
+    background-color: rgb(0, 0, 0);
+    width: 940px;
+    margin: auto;
+    padding: 0;
+
+}
+
+.Logo p{
+    font-family: Arial, sans-serif; 
+    margin: 0;
+    margin-left: 10px;
+    text-align: left;
+    color: beige;
+} 
+
+.Navigation{
+    background-color: grey;
+    width: 940px;
+    height: 50px;
+    display: flex;
+    justify-content:flex-start;
+    margin: auto;
+
+}
+
+.imgtop img{
+    float: right;
+    height : 20px;
+    width: 20px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    margin-left: 530px;
+    border-radius: 10px;
+    justify-self: end;
+}
+
+.Navigation li{
+    display: inline-block;
+    padding: 0;
+}
+.Navigation ul{
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+}
+.Navigation a{
+    text-decoration: none;
+    color: white;
+    display:block;
+    padding : 16px 20px;
+    box-sizing: border-box;
+}
+.Navigation a:hover{
+    background-color: darkgray;
+    color: red;
+}
+
+
+
+.Navigationb ul{
+    background-color: rgb(255, 112, 112);
+    list-style-type: none;
+    width: 300px;
+    display: block;
+    margin: 0;
+    padding: 0;
+}
+.Navigationb li{
+    width: 100%;
+    margin-bottom: 1px;
+    border-bottom: 1px solid #000dff;
+    
+}
+.Navigationb a{
+    text-decoration: none;
+    color: rgb(255, 18, 18);
+    display:block;
+    padding : 18px 30px;
+    box-sizing: border-box;
+}
+.Navigationb a:hover{
+    background-color: darkgray;
+    color: rgb(99, 2, 255);
+}
+.Navigationb{
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+
+.dots{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.image img{
+    width : 940px;
+    height: 380px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+.dot{
+    display: inline-block;
+    background-color: rgb(255, 0, 0);
+    width: 15px;
+    height: 15px;
+    border-style: none;
+    border-radius:50%;
+    margin-right: 5px;
+}
+.rndbtn{
+    display: block;
+    border-radius: 15px 15px 15px 15px;
+    margin-right: 5px;
+}
+
+.About, .Company, .Services{
+    background-color: rgb(130, 255, 174);
+    display: inline;
+    height: 210px;
+    width: 300px;
+    margin-right: 10px;
+    padding-left: 10px;
+
+
+}
+.About{
+    margin-left: 20px;
+}
+.Services{
+    margin-right: 20px;
+}
+.bottom p{
+    font-size: 18px;
+}
+.bottom{
+    margin: auto;
+    display: flex;          
+    justify-content:center;
+    
+
+}
+
+.Content{
+    background-color: rgb(108, 209, 255);
+    width: 940px;
+    display: flex;  
+    margin: auto; 
+    margin-top: 30px;
+    height: 320px;
+}
+.context p{
+    font-size: 17px;
+    margin-left: 10px;
+    margin-top: 0;
+}
+.context{
+    margin-left: 7px;
+    margin-top: 0;
+}
+.context h3{
+    font-weight: bold;
+    font-size: 20px;
+    margin-bottom: 2px;
+}
+.context h2{
+    font-weight: bolder;
+    font-size: 28px;
+    margin-bottom: 2px;
+}
+.footer{
+    background-color: rgb(84, 187, 255);
+    margin: auto;
+    display: flex;
+    width: 940px;
+    justify-content: space-between;
+
+}
+.footer p{
+    font-size: 14px;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+.AllGallery{
+    margin:auto;
+    width: 940px;
+}
+.AllGallery img{
+    width: 235px;
+    height: 190px;
+}
+.galleryimage{
+    display: flex;
+}
