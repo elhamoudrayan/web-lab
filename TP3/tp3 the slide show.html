@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script type="text/javascript">
+        var i = 1
+        nbphotos=5
+        var t
+        function showImage(index) {
+            var imgElement = document.getElementById('slideshow-img')
+            imgElement.src = 'pic' + index + '.jpg'
+        }
+        function startSlideshow() {
+            showImage(i)
+            i++
+            if (i > nbphotos) {  i = 1;  }
+            t = setTimeout(startSlideshow, 2000)
+        }
+        function stopSlideshow() {
+            clearTimeout(t)
+        }
+    </script>
+</head>
+<body>
+    <img id="slideshow-img" src="pic1.jpg" alt="Slideshow Image">
+    <br>
+    <input type="button" value="Start Slideshow" onclick="startSlideshow()">
+    <input type="button" value="Stop Slideshow" onclick="stopSlideshow()">
+</body>
+</html>
