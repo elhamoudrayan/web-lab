@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Simple Calculator Exercise</title>
+    <style>
+        body {
+            background-color: cyan;
+        }
+        #numA {
+        margin-right: 20px;
+    }
+        #correctAddResult {
+        margin-right: 20px;
+    }
+        #correctSubResult {
+            margin-right: 20px;
+    }
+        #correctMulResult {
+            margin-right: 20px;
+    }
+        #solutionBox {
+            padding-top: 5px; padding-bottom: 5px; padding-right: 2px; padding-left: 2px; 
+            border: 3px solid black;
+            margin-left: 50px; margin-right: 1070px;
+    }
+        #solutionBox button {
+            padding-left: 85px; padding-right: 88px;
+    }
+    </style>
+</head>
+<body onload="initialize()">
+    <h1>Vos données</h1>
+    A= <input type="text" id="numA" readonly>
+    B= <input type="text" id="numB" readonly>
+    <br><br>
+
+    <h2>Votre solution</h2>
+    <div id="solutionBox">
+        A + B  <input type="text" id="addResult">
+        <br><br>
+        A - B  <input type="text" id="subResult">
+        <br><br>
+        A * B  <input type="text" id="mulResult">
+        <br><br>
+        A / B  <input type="text" id="divResult">
+        <br><br><br>
+        
+        <button onclick="checkAnswers()">Verifier</button>
+    </div>
+
+    <h3>La correction</h3>
+    A + B  <input type="text" id="correctAddResult" readonly>
+    A - B  <input type="text" id="correctSubResult" readonly>
+    A * B  <input type="text" id="correctMulResult" readonly>
+    A / B  <input type="text" id="correctDivResult" readonly>
+
+    <button onclick="showCorrectAnswers()">OK</button>
+
+    <script>
+        function initialize() {
+            var numA = Math.floor(Math.random() * 100) + 1;
+            var numB = Math.floor(Math.random() * 100) + 1;
+            document.getElementById("numA").value = numA;
+            document.getElementById("numB").value = numB;
+        }
+
+        function checkAnswers() {
+            var addResult = parseInt(document.getElementById("addResult").value);
+            var subResult = parseInt(document.getElementById("subResult").value);
+            var mulResult = parseInt(document.getElementById("mulResult").value);
+            var divResult = parseFloat(document.getElementById("divResult").value);
+
+            if (!isNaN(addResult) && !isNaN(subResult) && !isNaN(mulResult) && !isNaN(divResult)) {
+                var numA = parseInt(document.getElementById("numA").value);
+                var numB = parseInt(document.getElementById("numB").value);
+
+                var cnd1 = addResult === numA + numB;
+                var cnd2 = subResult === numA - numB;
+                var cnd3 = mulResult === numA * numB;
+                var cnd4 = divResult === numA / numB;
+
+                if (cnd1 && cnd2 && cnd3 && cnd4) {
+                    alert("Very good! Your answers are all correct!");
+                } else {
+                    alert("Pay attention! There was an error in your answer. Recalculate again.");
+                }
+            } else {
+                alert("Please fill all fields with valid numbers.");
+            }
+        }
+        function showCorrectAnswers() {
+            var numA = parseInt(document.getElementById("numA").value);
+            var numB = parseInt(document.getElementById("numB").value);
+
+            document.getElementById("correctAddResult").value = numA + numB;
+            document.getElementById("correctSubResult").value = numA - numB;
+            document.getElementById("correctMulResult").value = numA * numB;
+            document.getElementById("correctDivResult").value = numA / numB;
+
+            document.getElementById("addResult").disabled = true;
+            document.getElementById("subResult").disabled = true;
+            document.getElementById("mulResult").disabled = true;
+            document.getElementById("divResult").disabled = true;
+        }
+    </script>
+</body>
+</html>
