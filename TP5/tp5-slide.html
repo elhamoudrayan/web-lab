@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Image Slideshow</title>
+    <style>
+        #slideshow {
+            position: flex;
+            width: 300px;
+            height: 200px;
+            overflow: hidden;
+            align-items: center;
+            justify-content: center;
+
+        }
+        #slideshow img {
+            position: absolute;
+            width: 20%;
+            height: 30%;
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            const $slideshow = $('#slideshow');
+            const $images = $slideshow.find('img');
+            let currentIndex = 0;
+            let interval;
+
+            function showImage() {
+                $images.eq(currentIndex).fadeOut(3000, function() {
+                    currentIndex = (currentIndex + 1) % $images.length;
+                    $images.eq(currentIndex).fadeIn(3000);
+                });
+            }
+
+            $('#startButton').click(function() {
+                if (interval) clearInterval(interval);
+                showImage();
+                interval = setInterval(showImage, 6000); 
+            });
+
+
+            $images.not(':first').hide();
+        });
+    </script>
+</head>
+<body>
+    <div id="slideshow">
+        <img src="1.jpg" alt="Image 1">
+        <img src="2.jpg" alt="Image 2">
+        <img src="3.jpg" alt="Image 3">
+        <img src="4.jpg" alt="Image 1">
+        <img src="5.jpg" alt="Image 2">
+        <img src="6.jpg" alt="Image 3">
+        <img src="7.jpg" alt="Image 1">
+        <img src="8.jpg" alt="Image 2">
+        <img src="9.jpg" alt="Image 3">
+        <img src="10.jpg" alt="Image 1">
+        <img src="11.jpg" alt="Image 2">
+        <img src="12.jpg" alt="Image 3">
+        <img src="13.jpg" alt="Image 1">
+        <img src="14.jpg" alt="Image 1">
+        <img src="15.jpg" alt="Image 1">
+        <img src="16.jpg" alt="Image 1">
+
+    </div>
+    <br><br>
+    <div>
+    <button id="startButton">Start Slideshow</button>
+    </div>
+</body>
+</html>
